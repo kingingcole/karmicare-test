@@ -1,0 +1,30 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "react-hooks"
+    ],
+    "parser": "babel-eslint",
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "import/resolver": {
+        "webpack": { "config": "./webpack/webpack.prod.config.js" }
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true
+    },
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "import/prefer-default-export": "off",
+      "import/no-named-as-default": "off"
+    }
+}
